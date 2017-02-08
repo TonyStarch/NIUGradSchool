@@ -1,0 +1,23 @@
+#!/bin/csh
+ls -l $2 | awk '{ printf("FILESIZE = %d\n", $4) }'
+
+set com = $0
+set tf = /tmp/$com:t.$$
+
+@ N = 15; @ n = 1;
+while ($n <= $N)
+    compile.531 $1
+    link.531 $1
+
+    awk '/define/ { printf("\nBUFSIZE = %5d: ", $3) }' $1.c
+    timex $1 < $2 > /dev/null
+
+    awk '/define/ { $3 = 2 * $3 } { print }' $1.c > $tf
+    /usr/bin/cp $tf $1.c
+    @ n++
+end
+
+awk '/define/ { $3 = 1 } { print }' $1.c > $tf
+/usr/bin/cp $tf $1.c
+/usr/bin/rm $tf
+

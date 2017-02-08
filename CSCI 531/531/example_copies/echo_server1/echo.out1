@@ -1,0 +1,50 @@
+Script started on Tue Mar 08 12:32:38 2005
+21 > server1.exe &
+[1] 15056
+22 > client1.exe 127.0.0.1
+hello, world
+hello, world
+good bye
+good bye
+^D23 > ps
+   PID TT       S  TIME COMMAND
+ 15082          Z  0:00 
+ 12413 pts/5    S  0:00 -csh
+ 15049 pts/5    S  0:00 script echo.out1
+ 15050 pts/5    S  0:00 script echo.out1
+ 15051 pts/9    S  0:00 sh -i
+ 15056 pts/9    S  0:00 server1.exe
+24 > kill 15056
+25 > ps
+   PID TT       S  TIME COMMAND
+ 12413 pts/5    S  0:00 -csh
+ 15049 pts/5    S  0:00 script echo.out1
+ 15050 pts/5    S  0:00 script echo.out1
+ 15051 pts/9    R  0:00 sh -i
+[1]  + Killed               server1.exe
+26 > server2.exe &
+[1] 15147
+27 > client1.exe 127.0.0.1
+hello, world
+hello, world
+good bye
+good bye
+^D28 > child 15154 terminated
+
+28 > ps
+   PID TT       S  TIME COMMAND
+ 12413 pts/5    S  0:00 -csh
+ 15049 pts/5    S  0:00 script echo.out1
+ 15050 pts/5    S  0:00 script echo.out1
+ 15051 pts/9    S  0:00 sh -i
+ 15147 pts/9    S  0:00 server2.exe
+29 > kill 15147
+30 > ps
+   PID TT       S  TIME COMMAND
+ 12413 pts/5    S  0:00 -csh
+ 15049 pts/5    S  0:00 script echo.out1
+ 15050 pts/5    S  0:00 script echo.out1
+ 15051 pts/9    S  0:00 sh -i
+[1]  + Killed               server2.exe
+31 > ^D
+script done on Tue Mar 08 12:35:02 2005

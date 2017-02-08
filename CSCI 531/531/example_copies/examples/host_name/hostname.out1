@@ -1,0 +1,20 @@
+Script started on Wed Apr 27 11:20:22 2005
+21 > hostname.exe mp ux
+official hostname: mp
+        alias: mp
+        address: 131.156.145.41
+        address: 131.156.68.41
+official hostname: ux
+        alias: ux
+        address: 131.156.145.2
+        address: 131.156.68.2
+22 > hostname.exe ftp www
+official hostname: mp.cs.niu.edu
+        alias: ftp.cs.niu.edu
+        address: 131.156.145.41
+        address: 131.156.68.41
+official hostname: oldmp
+        alias: www
+        address: 131.156.145.10
+23 > ^D
+script done on Wed Apr 27 11:21:00 2005

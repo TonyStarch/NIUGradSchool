@@ -1,0 +1,147 @@
+Brandon Tweed
+CSCI 464
+Assignment 6
+Instructor: Stack
+TA: Bessee
+Logic for BalTreSI: Balanced Tree Search and Insertion
+
+Logic based upon Algorithm A from section 6.2.3, p.462 of Sorting and Searching by Knuth
+
+**** A1 [initialize] ****
+[1] Set T <- HEAD
+[2] Set P <- RLINK(HEAD)
+[3] Set S <- P
+
+**** A2 [compare] ****
+[4]  IF K < KEY(P)
+[5]     goto A3
+[6]  ENDIF
+[7]  IF K > KEY(P)
+[8]      goto A4
+[9]  ENDIF
+[10] IF K = KEY(P)
+[11]    Terminate search successfully(?)
+[12] ENDIF
+
+**** A3 [Move left.] ****
+
+[13] Set Q <- LLINK(P)
+[14] IF Q = Null 
+[15]    Q <= AVAIL
+[16]    LLINK(P) = Q
+[17]    goto step A5
+[18] ELSE
+[19]    IF B(Q) NOT = Zero
+[20]        set T <- P
+[21]        set S <- Q
+[22]    ENDIF
+[23] ENDIF
+[24] set P <- Q
+[25] Goto step A2
+
+**** A4 [Move right] ****
+
+[26] Set Q <- RLINK(P)
+[27] If Q = null
+[28]     Q <= AVAIL
+[29]     RLINK(P) <- Q
+[30]     goto step A5
+[31] ELSE
+[32]    IF B(Q) NOT = Zero
+[33]        set T <- P
+[34]        set S <- Q
+[35]    ENDIF
+[36] ENDIF
+[37] set P <- Q
+[38] Goto step A2
+
+**** A5 [Insert] ****
+
+[39] KEY(Q) <- K
+[40] LLINK(Q) <- null
+[41] RLINK(Q) <- null
+[42] B(Q) <- 0
+
+**** A6 [adjust balance factors] ****
+
+[43] IF K < KEY(S)
+[44]   a <- -1
+[45] ELSE
+[46]   a <- +1
+[47] ENDIF
+[48] P <- LINK(a,S)
+[49] R <- P
+[50] Do WHILE ( P not = Q)
+[51]    IF K < KEY(P)
+[52]        B(P) = -1
+[53]        P <- LLINK(P)
+[54]    ELSE
+[55]        IF K > KEY(P)
+[56]            B(P) <- +1
+[57]            P <- RLINK(P)
+[58]        ENDIF
+[59]    ENDIF
+[60] ENDDO
+
+**** A7 [Balancing act] ****
+
+[61] IF B(S) = 0
+[62]    B(S) <- a
+[63]    LLINK(HEAD) <- LLINK(HEAD) + 1
+[64]    terminate algorithm
+[65] ENDIF
+[66] IF B(S) = -a
+[67]    B(S) <- 0
+[68]    terminate algorithm
+[69] ENDIF
+[70] IF B(S) = a
+[71]    IF B(R) = a
+[72]        goto step A8
+[73]    ENDIF
+[74]    IF B(R) = -a
+[75]        goto step A9
+[76]    ENDIF
+[77] ENDIF
+
+**** A8 [single rotation] ****
+
+[78] P <- R
+[79] LINK(a,S) <- LINK(-a,R)
+[80] LINK(-a,R) <- S
+[81] B(S) <- 0
+[82] B(R) <- 0
+[83] goto step A10
+
+**** A9 [Double rotation] ****
+
+[84]  P <- LINK(-a,R)
+[85]  LINK(-a,R) <- LINK(a,P)
+[85]  LINK(a,P) <- R
+[86]  LINK(a,S) <- LINK(-a,P)
+[87]  LINK(-a,P) <- S
+[88]  IF B(P) = a
+[89]     B(S) <- -a
+[90]     B(R) <- 0
+[91]  ELSE
+[92]     IF B(P) = 0
+[93]         B(S) <- 0 
+[94]         B(R) <- 0
+[95]     ELSE
+[96]         IF B(P) = -a
+[97]             B(S) <- 0
+[98]             B(R) <- a
+[99]         ENDIF
+[100]    ENDIF
+[101] ENDIF
+[102] B(P) <- 0
+
+**** A10 [finishing touch] ****
+
+[103] IF S = RLINK(T)
+[104]     RLINK(T) <- P
+[105] ELSE
+[106]     LLINK(T) <- P
+[107] ENDIF
+
+
+

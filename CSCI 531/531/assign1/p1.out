@@ -1,0 +1,66 @@
+
+directory: .
+.
+..
+wrapper.c
+P1
+prog1.o
+dir_list.c
+prog1.h
+wrapper.o
+p1.out
+prog1.c
+wrapper.h
+prog1.exe
+prog1.out
+
+directory: .
+.
+..
+wrapper.c
+P1
+prog1.o
+dir_list.c
+prog1.h
+wrapper.o
+p1.out
+prog1.c
+wrapper.h
+prog1.exe
+prog1.out
+
+directory: /vol
+.
+..
+dev
+rmt
+dsk
+rdsk
+
+directory: /usr2/onyuksel/unx
+.
+..
+junk
+notes
+ref
+
+directory: /dev/tty
+Error opening file: Not a directory
+
+directory: /lost+found
+Error opening file: Permission denied
+
+directory: .
+.
+..
+wrapper.c
+P1
+prog1.o
+dir_list.c
+prog1.h
+wrapper.o
+p1.out
+prog1.c
+wrapper.h
+prog1.exe
+prog1.out

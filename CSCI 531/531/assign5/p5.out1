@@ -1,0 +1,42 @@
+tmpX : No such file or directory
+p5.h: No such file or directory
+p5.h: No such file or directory
+connect error: Connection refused
+inet_pton error: Invalid address
+FTP> 
+bye            	cd             	cdup           	
+close          	delete         	help           	
+lcd            	mkdir          	open           	
+pwd            	rename         	rmdir          	
+disconnect     	?              	
+FTP> lcd	change local working directory
+FTP> Local directory now /home/mp/z030199
+FTP> ?Invalid command
+FTP> Not connected.
+FTP> (to) Connected to 131.156.145.2
+FTP> (remote directory) CWD command successful.
+FTP> "/home/mp/z030199" is current directory.
+FTP> CWD command successful.
+FTP> Local directory now /home/mp/z030199/tmp5
+FTP> mkdir command successful.
+FTP> (directory-name) FTP> rmdir command successful.
+FTP> rename command successful.
+FTP> (to-name) rename command successful.
+FTP> (from-name) (to-name) rename command successful.
+FTP> ?Invalid command
+FTP> delete	delete remote file
+FTP> (remote file) FTP> "/home/mp/z030199/tmp5" is current directory.
+FTP> CWD command successful.
+FTP> FTP> delete command successful.
+FTP> CWD command successful.
+FTP> "/home/mp/z030199/tmp5" is current directory.
+FTP> FTP> Not connected.
+FTP> FTP> FTP> FTP> Connected to 131.156.145.2
+FTP> CWD command successful.
+FTP> CWD command successful.
+FTP> "/" is current directory.
+FTP> Goodbye.
+FTP> Not connected.
+FTP>      UID   PID  PPID  C    STIME TTY      TIME CMD
+ z030199 16081 15928  0 18:25:57 pts/12   0:00 /bin/csh P5_1
+ z030199 15928 15926  0 18:22:06 pts/12   0:00 -csh

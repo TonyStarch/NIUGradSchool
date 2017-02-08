@@ -1,0 +1,9 @@
+#!/bin/sh
+
+
+makecli
+makeserv
+mv prog4_client prog4_client.exe
+mv prog4_server prog4_server.exe
+
+

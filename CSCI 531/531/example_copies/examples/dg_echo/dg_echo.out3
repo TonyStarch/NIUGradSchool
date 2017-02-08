@@ -1,0 +1,7 @@
+Script started on Mon Apr 18 14:24:31 2005
+21 > server2.exe
+^C
+received 46419 datagrams
+recvfrom error: Interrupted system call
+22 > ^D
+script done on Mon Apr 18 14:25:09 2005

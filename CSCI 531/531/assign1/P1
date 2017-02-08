@@ -1,0 +1,26 @@
+#!/bin/csh
+
+# Enter executable file from keyboard
+# or supply it on Unix command line.
+
+if ($#argv == 0) then
+    echo -n "Enter your executable file: "
+    set efile = $<
+else
+    set efile = $1
+endif
+
+# If file does not exist, abort program.
+if (! -e $efile) then
+    echo "*** ${efile}: no such file ***"
+    exit 1
+endif
+
+$efile
+
+$efile /
+
+$efile /vol ~onyuksel/unx /dev/tty
+
+$efile /lost+found .
+

@@ -1,0 +1,13 @@
+#!/bin/csh
+
+compile.531 prog3_client prog3_server wrapper
+link.531 prog3_client wrapper
+link.531 prog3_server wrapper
+cp prog3_client prog3_client.exe
+cp prog3_server prog3_server.exe
+rm *.o
+rm prog3_client
+rm prog3_server
+P3_1
+rm *.exe
+

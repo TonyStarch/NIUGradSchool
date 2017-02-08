@@ -1,0 +1,26 @@
+
+SQL*Plus: Release 8.1.6.0.0 - Production on Wed May 4 22:54:03 2005
+
+(c) Copyright 1999 Oracle Corporation.  All rights reserved.
+
+
+Connected to:
+Oracle8i Enterprise Edition Release 8.1.6.0.0 - Production
+With the Partitioning option
+JServer Release 8.1.6.0.0 - Production
+
+
+	ID NAME       DEPT	 Assigned GPA
+---------- ---------- ---------- ------------
+	24 Dr. Drake  MATH		  3.5
+	26 Dr. Fink   MATH		  3.5
+	13 Dr. Cook   CSCI		    3
+	25 Dr. Engles MATH		    3
+	11 Dr. Adams  CSCI		 2.75
+	12 Dr. Bryce  CSCI		  2.5
+
+6 rows selected.
+
+Disconnected from Oracle8i Enterprise Edition Release 8.1.6.0.0 - Production
+With the Partitioning option
+JServer Release 8.1.6.0.0 - Production

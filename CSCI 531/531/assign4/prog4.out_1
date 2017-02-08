@@ -1,0 +1,36 @@
+Script started on Mon Mar 28 15:09:10 2005
+21 /home/mp/z030199/531/assign4%P4_1
+[1] 7934
+Title: 1985
+Author: Unknown
+
+Title: 1984
+Author: Orwell
+
+Title: Hobbit
+Author: Tolkien
+
+Title: Frankenstein
+Author: Shelly
+
+Title: ^D
+     UID   PID  PPID  C    STIME TTY      TIME CMD
+ z030199  7931  7930  0 15:09:10 pts/11   0:00 sh -i
+ z030199  7929  7855  0 15:09:10 pts/16   0:00 script prog4.out_1
+ z030199  8025  7933  0 15:11:35 pts/11   0:00 tee /tmp/P4_1.7933
+ z030199 11282 11280  0   Mar 26 pts/12   0:00 -csh
+ z030199  7855  7852  0 15:07:09 pts/16   0:00 -csh
+ z030199  7930  7929  0 15:09:10 pts/16   0:00 script prog4.out_1
+ z030199  7933  7931  0 15:09:14 pts/11   0:00 /bin/csh P4_1
+ z030199  7934  7933  0 15:09:14 pts/11   0:00 prog4_server.exe
+
+[1]  + Terminated           prog4_server.exe
+     UID   PID  PPID  C    STIME TTY      TIME CMD
+ z030199  7931  7930  0 15:09:10 pts/11   0:00 sh -i
+ z030199  7929  7855  0 15:09:10 pts/16   0:00 script prog4.out_1
+ z030199 11282 11280  0   Mar 26 pts/12   0:00 -csh
+ z030199  7855  7852  0 15:07:09 pts/16   0:00 -csh
+ z030199  7930  7929  0 15:09:10 pts/16   0:00 script prog4.out_1
+ z030199  7933  7931  0 15:09:14 pts/11   0:00 /bin/csh P4_1
+22 /home/mp/z030199/531/assign4%^D
+script done on Mon Mar 28 15:12:13 2005

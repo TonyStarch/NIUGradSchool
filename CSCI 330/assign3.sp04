@@ -1,0 +1,143 @@
+CSCI330                         Assignment #3                     Spring 2004 
+                          File Permissions (60 points)
+		      Due: 2:00 p.m., Tuesday, 2/10/2004		
+
+
+Part A. (40 points total)
+For this part of the assignment, you are the owner of the mentioned 
+directories and files.  
+
+	A1:   At a current working directory (i.e. it can be your home directory),
+	      start a transcript file, named "A3.PartA".
+	A2:   Create a directory named "udir" in your home directory.
+	A3:   Make sure the directory "udir" has read, write, and execute 
+	      permissions for the owner.
+	A4:   Make "udir" your current directory.
+	A5:   In the directory "udir", create two text files, named "file1"
+	      and "file2".
+	      Use the following commands:
+	      echo "Line A of file1 file" > file1
+	      echo "Line A of file2 file" > file2
+	A6:   Make sure you have read permission for the files "file1" and 
+	      "file2".
+	A7:   Move to the parent directory of the "udir" directory and perform 
+	      tasks A8 through A15.
+	A8:   Change the permissions of the directory "udir" so that it has
+	      only READ and WRITE permissions.  Also, list the permissions
+	      on the "udir" directory to confirm the permission change.
+	
+	For the following tasks, your current working directory is always your
+	the parent directory of the "udir" directory.  
+
+	A9:   Can you make "udir" your current directory (i.e. cd to it)? 
+	      Why or why not?
+	A10:  Can you list the contents of the "udir" directory? 
+	      Why or why not?
+	A11:  Can you view the contents of the "file1" file?  Why or why not?
+	A12:  Can you copy the "file2" file to a different directory? 
+	      Why or why not?
+	A13:  Can you rename the "file1" file to "file1.old"?  Why or why not?
+	A14:  Can you remove (i.e. delete) a file from the directory? 
+	      Why or why not?
+	A15:  Can you hard link to the "file2" file? Why or why not?
+
+	A16:  Change the permissions of the "udir" directory so that it has
+	      only READ and EXECUTE permissions.  
+
+	      Also, list the permissions on the "udir" directory to confirm
+	      the permission change.
+
+	      Next, repeat tasks A9 through A15 above and make sure your 
+	      current directory is always your home directory. This means, 
+	      for question A9, if you are able to change directory to "udir", 
+	      you must go back to your home directory to complete A10 
+	      through A16. 
+
+	A17:  Change the permissions of the "udir" directory so that it has
+	      only WRITE and EXECUTE permissions.  
+
+	      Also, list the permissions on the "udir" directory to confirm
+	      the permission change.
+
+	      Next, repeat tasks A9 through A15 above and make sure your 
+	      current directory is always your home directory. This means, 
+	      for question A9, if you are able to change directory to "udir", 
+	      you must go back to your home directory to complete A10 
+	      through A16. 
+
+	A19:  Close your transcript file.
+
+
+Part B.	(20 points) Clearly show in a typescript file all UNIX commands you
+	issue to accomplish the following tasks. If your T.A. cannot read 
+	your work, you will not receive credit for it.  
+	Note: the tasks below are dependent on each other.
+
+	B1:  Start a transcript file, named "A3.PartB". 
+
+	B2:  Use the command named "groups" to check which group or 
+	     groups you belong to.  Can an ordinary user belong to more 
+	     than one group?
+
+	B3:  Check your default permission mask.  Explain the meaning of 
+	     the mask that you have.
+
+   	B4:  Create three directories called "current-assign", "data", and 
+	     "submit-assign".
+
+	B5.  List the permissions on the three directories you just created. 
+
+	B6:  Using octal mode, set the permissions for the "data" 
+	     directory so that you have all three permissions (rwx), users in 
+	     your group have read access only, and the other users of the 
+	     system have no access permissions.
+ 
+	B7.  List the permissions on the directory "data" to confirm the
+	     permission change.
+
+	B8:  Using symbolic mode, issue the command to give others only 
+	     execute permission to the "data" directory.  
+
+	B9.  List the permissions on the directory "data" to confirm 
+	     that others have execute permission to the directory.
+
+	B10: Change the default permission mask to 022.  Explain the meaning
+	     of the mask.
+
+	B11: What are the default permissions for all directories created 
+	     after step B10?
+
+	B12: What are the default permissions for all files created after
+	     step B10? 
+
+	B13: Check the permissions on the "data" directory.  Did the 
+	     permissions change after you performed step B10?  Why or 
+	     why not?  
+
+	B14: Create a directory called "backups" in your home directory.
+
+	B15: Copy the file named "local.profile" in the system directory 
+	     "/etc/skel" to your home directory and rename it to ".profile"
+
+	B16: Copy the ".cshrc" file in your home directory to the "backups" 
+	     directory and rename it to "save.cshrc".
+
+	B17: List ALL files in long format in the "backups" directory that you
+	     created in B14.
+
+	B18: Close your transcript file.
+
+
+Submit for grading the following:
+1.  E-mail your solution files to your instructor (krush+330) prior 
+    to the due date and time. 
+
+    shar A3.Part[1-2] | mailx -s "assign3" krush+330
+
+2.  On your printed copy, highlight the commands you issued and any 
+    hand-written answers.  Submit the printed copy in the drop-box for 
+    your T.A. to grade.
+
+
+				[ The End ]
+

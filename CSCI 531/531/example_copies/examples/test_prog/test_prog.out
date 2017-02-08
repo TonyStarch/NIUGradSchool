@@ -1,0 +1,103 @@
+Script started on Mon Jan 31 10:27:59 2005
+21 > gen_data test_prog.c data_file
+22 > ls -l
+total 3395
+-rwxr-xr-x   1 onyuksel      445 Jan 31 10:25 TEST_PROG
+-rw-------   1 onyuksel  3460000 Jan 31 10:29 data_file
+-rwxr-xr-x   1 onyuksel       98 Jan 28 12:49 gen_data
+-rw-r--r--   1 onyuksel      346 Jan 28 14:29 test_prog.c
+-rw-r--r--   1 onyuksel        0 Jan 31 10:27 test_prog.out
+23 > TEST_PROG test_prog data_file
+FILESIZE = 3460000
+
+BUFSIZE =     1: 
+real       41.21
+user        8.95
+sys        32.11
+
+
+BUFSIZE =     2: 
+real       20.64
+user        4.32
+sys        16.11
+
+
+BUFSIZE =     4: 
+real       10.41
+user        2.22
+sys         8.01
+
+
+BUFSIZE =     8: 
+real        5.23
+user        1.04
+sys         4.12
+
+
+BUFSIZE =    16: 
+real        2.75
+user        0.55
+sys         2.09
+
+
+BUFSIZE =    32: 
+real        1.44
+user        0.25
+sys         1.08
+
+
+BUFSIZE =    64: 
+real        0.79
+user        0.13
+sys         0.56
+
+
+BUFSIZE =   128: 
+real        0.50
+user        0.07
+sys         0.33
+
+
+BUFSIZE =   256: 
+real        0.35
+user        0.02
+sys         0.20
+
+
+BUFSIZE =   512: 
+real        0.29
+user        0.05
+sys         0.13
+
+
+BUFSIZE =  1024: 
+real        0.19
+user        0.01
+sys         0.10
+
+
+BUFSIZE =  2048: 
+real        0.17
+user        0.00
+sys         0.07
+
+
+BUFSIZE =  4096: 
+real        0.20
+user        0.00
+sys         0.06
+
+
+BUFSIZE =  8192: 
+real        0.16
+user        0.00
+sys         0.06
+
+
+BUFSIZE = 16384: 
+real        0.16
+user        0.00
+sys         0.03
+
+24 > ^D
+script done on Mon Jan 31 10:31:50 2005

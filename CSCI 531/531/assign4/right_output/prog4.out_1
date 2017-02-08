@@ -1,0 +1,34 @@
+Script started on Thu Feb 17 12:14:17 2005
+21 > P4_1
+[1] 14015
+Title of book : 1985
+Author of book: Unknown
+
+Title of book : 1984
+Author of book: Orwell
+
+Title of book : Hobbit
+Author of book: Tolkien
+
+Title of book : Frankenstein
+Author of book: Shelly
+
+Title of book : ^D
+     UID   PID  PPID  C    STIME TTY      TIME CMD
+onyuksel 14014 14009  0 12:14:24 pts/7    0:00 /bin/csh P4_1
+onyuksel 14015 14014  0 12:14:24 pts/7    0:00 prog4_server.exe
+onyuksel 14008 14007  0 12:14:17 pts/17   0:00 script prog4.out_1
+onyuksel 14055 14014  0 12:15:24 pts/7    0:00 tee /tmp/P4_1.14014
+onyuksel 14009 14008  0 12:14:17 pts/7    0:00 sh -i
+onyuksel 12812 12810  0 11:46:03 pts/17   0:00 -csh
+onyuksel 14007 12812  0 12:14:17 pts/17   0:00 script prog4.out_1
+
+     UID   PID  PPID  C    STIME TTY      TIME CMD
+onyuksel 14014 14009  0 12:14:24 pts/7    0:00 /bin/csh P4_1
+onyuksel 14008 14007  0 12:14:17 pts/17   0:00 script prog4.out_1
+onyuksel 14009 14008  0 12:14:17 pts/7    0:00 sh -i
+onyuksel 12812 12810  0 11:46:03 pts/17   0:00 -csh
+onyuksel 14007 12812  0 12:14:17 pts/17   0:00 script prog4.out_1
+[1]  + Killed               prog4_server.exe
+22 > ^D
+script done on Thu Feb 17 12:15:26 2005

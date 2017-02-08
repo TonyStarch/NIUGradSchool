@@ -1,0 +1,10 @@
+Script started on Mon May 02 10:24:55 2005
+21 > dtm_client.exe mp daytime
+trying 131.156.145.41.13
+Mon May  2 10:25:10 2005
+22 > ^mp^ux
+dtm_client.exe ux daytime
+trying 131.156.145.2.13
+Mon May  2 10:25:18 2005
+23 > ^D
+script done on Mon May 02 10:25:22 2005

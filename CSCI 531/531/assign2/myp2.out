@@ -1,0 +1,19 @@
+prog2.exe
+Usage: prog2.exe <IPaddress>
+
+prog2.exe 127.0.0.1
+Wed Feb 16 22:16:07 2005
+
+prog2.exe 131.156.145.41
+Wed Feb 16 22:16:07 2005
+
+prog2.exe 131.156.145.2
+Wed Feb 16 22:16:06 2005
+
+prog2.exe 131.156.145.1
+Error connecting: Connection refused
+
+prog2.exe 131.156.145
+inet_pton error for 131.156.145
+value is not a valid IPv4 dotted decimal string
+

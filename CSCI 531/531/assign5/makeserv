@@ -1,0 +1,7 @@
+#!/bin/sh
+
+compile.531 prog5server prog5util  in_out wrapper
+link.531 prog5server prog5util  in_out wrapper
+rm *.o
+mv prog5server prog5_server.exe
+

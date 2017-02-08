@@ -1,0 +1,26 @@
+Script started on Thu Mar 18 11:33:39 2004
+21 /home/mp/z030199%/home/ux/krush/unix/assignments/graderun-a7cron
+
+**** Graderun for CSCI 330 Assignment 7, Spring 2004. ****
+
+Enter your unix grade program name: /home/mp/z030199/bin/checkgrades
+Enter your cron table name: a7partb.cron
+*** Program Source Code ...***
+/home/ux/krush/unix/grades/330assign-graderun 2
+/home/ux/krush/unix/grades/330exam-graderun 2
+/home/ux/krush/unix/grades/330quiz-graderun 2
+
+*** Cron Table Source Code ...***
+0 5 * * 1 checkgrades
+0 5 * * 5 checkgrades
+
+*** Check to see if a7partb.cron had been registered ***
+0 5 * * 1 checkgrades
+0 5 * * 5 checkgrades
+
+*** The exit status is 0, a7partb.cron had been registered ***
+
+Graderun Complete...
+22 /home/mp/z030199%exit
+23 /home/mp/z030199%
+script done on Thu Mar 18 11:34:43 2004

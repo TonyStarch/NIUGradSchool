@@ -1,0 +1,31 @@
+Script started on Fri Mar 11 11:00:30 2005
+21 > server2.exe &
+[1] 25686
+22 > /bin/ps -f -u $user
+     UID   PID  PPID  C    STIME TTY      TIME CMD
+onyuksel 25679 25505  0 11:00:30 pts/8    0:00 script echo.out3_2
+onyuksel 25686 25681  0 11:00:39 pts/9    0:00 server2.exe
+onyuksel 25505 25503  0 10:44:00 pts/8    0:00 -csh
+onyuksel 25680 25679  0 11:00:30 pts/8    0:00 script echo.out3_2
+onyuksel 25687 25686  0 11:01:04 pts/9    0:00 server2.exe
+onyuksel 25681 25680  0 11:00:30 pts/9    0:00 sh -i
+23 > kill 25687
+24 > child 25687 terminated
+
+24 > ps
+   PID TT       S  TIME COMMAND
+ 25505 pts/8    S  0:00 -csh
+ 25679 pts/8    S  0:00 script echo.out3_2
+ 25680 pts/8    S  0:00 script echo.out3_2
+ 25681 pts/9    S  0:00 sh -i
+ 25686 pts/9    S  0:00 server2.exe
+25 > kill 25686
+26 > ps
+   PID TT       S  TIME COMMAND
+ 25505 pts/8    S  0:00 -csh
+ 25679 pts/8    S  0:00 script echo.out3_2
+ 25680 pts/8    S  0:00 script echo.out3_2
+ 25681 pts/9    S  0:00 sh -i
+[1]  + Killed               server2.exe
+27 > ^D
+script done on Fri Mar 11 11:02:26 2005

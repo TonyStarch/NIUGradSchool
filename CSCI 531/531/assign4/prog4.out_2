@@ -1,0 +1,21 @@
+Script started on Mon Mar 28 15:10:05 2005
+21 /home/mp/z030199/531/assign4%P4_2
+Title: Author: Unknown
+
+Title: Author: Steve Heller
+
+Title: Author: Joseph Hammond and Peter O'Reilly
+
+Title: Author: Albert Beiler
+
+Title: 
+     UID   PID  PPID  C    STIME TTY      TIME CMD
+ z030199 15177 14967  0 15:10:05 pts/16   0:00 script prog4.out_2
+ z030199 15179 15178  0 15:10:05 pts/3    0:00 sh -i
+ z030199 14967 14964  0 14:58:55 pts/16   0:00 -csh
+ z030199 15178 15177  0 15:10:05 pts/16   0:00 script prog4.out_2
+ z030199  4251  4249  0   Mar 26 pts/27   0:00 -csh
+ z030199 15185 15179  0 15:10:17 pts/3    0:00 /bin/csh P4_2
+22 /home/mp/z030199/531/assign4%exit
+23 /home/mp/z030199/531/assign4%
+script done on Mon Mar 28 15:10:46 2005

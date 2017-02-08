@@ -1,0 +1,157 @@
+#!/bin/sh
+
+################################################
+#
+# Brandon Tweed
+# CSCI 330 - Section 2
+# Assignment 9 - Nawk Programming
+# Instructor: Berezinski
+# TA: Kons Muhtaris
+#
+# Description:
+# Processes a file of student grades by
+# printing the grades for each student
+# organized into a matrix format.
+# Also calculates totals for each category
+# and prints the percentage achieved out of
+# total points possible for each category.
+#
+###############################################
+
+
+
+nawk -F: '
+
+# if 1st field contains only the word 'Key'
+# if 2nd word is 'quiz'
+
+(($1 ~ /Key/) && ($2 ~ /quiz/)){
+    totalquiz[$3] = $4;
+}
+(($1 ~ /Key/) && ($2 ~ /assn/)){
+    totalassn[$3] = $4;
+}
+(($1 ~ /Key/) && ($2 ~ /test/)){
+    totaltest[$3] = $4;
+}
+
+# Create an associative array of names 
+$1 !~ /Key/{
+  names[$1]=$1;
+}
+
+# set up the assignment array
+($1 !~ /Key/) && ($2 ~ /assn/){
+   assn[$1,$3] = $4;
+}
+
+# set up the quiz array
+($1 !~ /Key/) && ($2 ~/quiz/){
+   quiz[$1,$3] = $4;
+}
+
+# set up the test array
+($1 !~ /Key/) && ($2 ~/test/){
+   test[$1,$3] = $4;
+}
+
+# after all records have been read in 
+END{
+  #Sum the max possible points for each category
+  maxquizpts = 0;
+  maxassnpts = 0;
+  maxtestpts = 0;
+
+  # 1 Sum max possible points for quiz
+  for( i in totalquiz ){
+    maxquizpts = maxquizpts + totalquiz[i];
+  }
+
+  # 2 Sum max possible points for assn
+  for( i in totalassn ){
+    maxassnpts = maxassnpts + totalassn[i];
+  }
+
+  # 3 Sum max possible points for test
+  for( i in totaltest ){
+    maxtestpts = maxtestpts + totaltest[i];
+  }
+
+  # calculate the maximum total of all points
+  maxtotalpts = maxtestpts + maxassnpts + maxquizpts;
+
+  #transfer the contents of the associative name array to indexed array
+  Count = 0;
+  for( name in names ){
+    namendx[Count] = name;
+    Count++;
+  }
+
+  # insertion sort
+  for(j = 1; j < Count; j++){
+    i = j - 1;
+    k = namendx[j];
+    while(k < namendx[i] && i >= 0){
+       namendx[i+1] = namendx[i];
+       i--;
+    }
+    namendx[i+1] = k;
+  }
+
+  # for each entry in the name array
+  for(i = 0; i < Count; i++){
+      pquiz_total = 0;
+      ptest_total = 0;
+      passn_total = 0;
+      stud_name = namendx[i];
+      printf("%s\n",stud_name);
+
+      # print column headers
+      printf("%-15s"," ");
+      for(ndx = 1; ndx <= 6; ndx++){
+          printf("%-5s",ndx);
+      }
+      printf("%-6s","Total");
+      printf("%-8s","Percent\n");      
+
+
+      # Print students assn information
+      printf("%-15s","Assignments");     
+      for(ndx=1; ndx <= 6; ndx++){
+          passn_total = passn_total + assn[stud_name,ndx];
+          printf("%-5s",assn[stud_name,ndx]);
+      }
+      printf("%-6s",passn_total);
+      printf("%-8s\%",passn_total/maxassnpts * 100);
+      printf("\n");
+
+      # print student quiz information
+      
+      printf("%-15s","Quiz Scores");
+      for(ndx=1; ndx <= 6; ndx++){
+          pquiz_total = pquiz_total + quiz[stud_name,ndx];
+          printf("%-5s",quiz[stud_name,ndx]);
+      }
+      printf("%-6s",pquiz_total);
+      printf("%-8s\%",pquiz_total/maxquizpts * 100);
+      printf("\n");
+
+      # print student test information
+
+      printf("%-15s","Test Scores");
+      for(ndx=1; ndx <= 6;ndx++){
+         ptest_total = ptest_total + test[stud_name,ndx];
+         printf("%-5s",test[stud_name,ndx]);
+      }
+      printf("%-6s",ptest_total);
+      printf("%-8s\%",ptest_total/maxtestpts * 100 );
+      printf("\n");
+      
+      stud_total = ptest_total + pquiz_total + passn_total;
+      printf("%-45s","Cumulative Totals:");
+      printf("%-6s",stud_total);
+      printf("%-8s\%\n\n",stud_total/maxtotalpts * 100);
+
+  }
+}
+' /home/max/berezin/Data/nawk.dat

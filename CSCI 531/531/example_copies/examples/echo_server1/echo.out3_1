@@ -1,0 +1,8 @@
+Script started on Fri Mar 11 11:00:21 2005
+21 > client1.exe 131.156.145.2
+hi there
+hi there
+bye
+str_cli: server terminated prematurely
+22 > ^D
+script done on Fri Mar 11 11:02:07 2005

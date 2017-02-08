@@ -1,0 +1,6 @@
+#!/bin/sh
+
+compile.531 prog4_server wrapper in_out
+link.531 prog4_server wrapper in_out
+rm *.o
+

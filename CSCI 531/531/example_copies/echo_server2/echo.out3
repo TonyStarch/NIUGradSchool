@@ -1,0 +1,32 @@
+Script started on Wed Apr 06 12:36:46 2005
+21 > ../test_prog/gen_data ../test_prog/test_prog.c data_file 1000
+22 > ls -l data_file
+-rw-------   1 onyuksel   346000 Apr  6 12:37 data_file
+23 > compile2.531 client1 util ../../common/{wrapper,in_out}
+24 > ^t1^t2
+compile2.531 client2 util ../../common/{wrapper,in_out}
+25 > ^client^server
+compile2.531 server2 util ../../common/{wrapper,in_out}
+26 > server2.exe &
+[1] 16185
+27 > timex client1.exe 127.0.0.1 < data_file > out_file1
+
+real        2.37
+user        0.28
+sys         1.35
+
+28 > ls -l out_file1
+-rw-------   1 onyuksel   293850 Apr  6 12:39 out_file1
+29 > timex client2.exe 127.0.0.1 < data_file > out_file2
+
+real        1.78
+user        0.29
+sys         1.16
+
+30 > ls -l out_file2
+-rw-------   1 onyuksel   346000 Apr  6 12:40 out_file2
+31 > kill 16185
+32 > /bin/rm *.exe data_file out_file?
+[1]  + Killed               server2.exe
+33 > ^D
+script done on Wed Apr 06 12:40:58 2005

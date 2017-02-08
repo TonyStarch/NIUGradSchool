@@ -1,0 +1,23 @@
+Script started on Mon Jan 31 14:16:15 2005
+21 > exec_cmd1
+% date
+Mon Jan 31 14:16:27 CST 2005
+% who
+support    pts/1        Jan  7 14:37    (euclid)
+rickert    pts/2        Jan  7 14:37    (euclid)
+t90kxs1    pts/3        Jan 31 08:29    (204.154.135.103)
+kreed      pts/4        Jan 31 13:40    (spxyric1.bankofamerica.com)
+z091647    pts/5        Jan 30 14:53    (131.156.154.99)
+onyuksel   pts/14       Jan 31 14:10    (n145h84.cs.niu.edu)
+z063653    pts/15       Jan 31 14:12    (fll01-30.acs.niu.edu)
+z019988    pts/13       Jan 31 12:30    (c-24-14-115-167.client.comcast.net)
+mcmahon    pts/16       Jan 31 13:49    (131.156.145.142)
+% pwd
+/home/mp/usr2/onyuksel/courses/531/examples/exec_cmd
+% ll
+couldn't execute: ll
+% ls
+exec_cmd1      exec_cmd1.o    exec_cmd2      exec_cmd2.o
+exec_cmd1.c    exec_cmd1.out  exec_cmd2.c    exec_cmd2.out
+% ^D22 > ^D
+script done on Mon Jan 31 14:16:48 2005

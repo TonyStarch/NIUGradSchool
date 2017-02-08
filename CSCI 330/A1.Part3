@@ -1,0 +1,164 @@
+Name: Brandon Tweed
+z-id: Z030199
+Class: CSCI 330 - Section 2
+Assignment 1 - Part 3
+
+Command: whatis umask
+Description:
+Looks up information about a command given as the second argument. The 
+information that is looked up is a header line from the man pages 
+describing which section of the man pages refers to the command followed 
+by a brief description of what the command is used for. In this case 
+information about the command "umask" is displayed.
+
+Command: umask 077
+Description: This command sets the file mode creation mask to 077. The 
+mask "077" suggests that from now on all files created will be created 
+with the permissions corresponding with the mask "077".
+
+Command: umask
+Description: umask by itself fetches the current file mode creation mask 
+and puts it on the screen.
+
+Command: ls
+Description: This lists the contents of the current working directory 
+without any additional information.
+
+Command: ls -l
+Description: Lists the contents of a directory in a long format, which 
+includes various details about file size, file permissions, time of last 
+modification and so on.
+
+Command: ls -la
+Description: Lists the contents of the current working directory including 
+those which start with a dot (.) with additional long format information.
+
+Command: ls -ld
+Description: Used as a quick way to get the status of a directory. Does 
+not list the contents of a directory given as an argument. The information 
+is given in long format.
+
+Command: ls -lL
+Description: Lists the contents of a directory in long format. For any 
+files that are symbolic links, the actual file that is referenced by the 
+link is displayed instead of the link.
+
+Command: ls -r
+Description:
+This causes the listing of the contents of the directory to be in reverse 
+order. That means that the file names will be displayed in reverse 
+alphabetical order.
+
+Command: passwd 
+Description: This command is used to change the password for one's UNIX 
+login.
+
+Command: find
+Description: This command is used to search downward recursively through a 
+path specified by the user for an expression specified by the user or 
+based on other criteria such as file type or date modified. Additional 
+options allow for a user to perform a certain command on files matching 
+the specified criteria. For instance, it's possible to delete files older 
+than a specified date.
+
+Command: grep
+Description:
+Allows the user to search through a file for an expression matching the 
+pattern specified within a regular expression. The regular expression has 
+special formatting rules which require careful attention when creating a 
+regular expression in order to achieve the proper results.
+
+Command: shar
+Description:
+This command is used to create "shell archives". These are files that are 
+packed in a text format and can later be unpacked by using /bin/sh. These 
+archives are convenient for storing and archiving text files which can be 
+reopened at a later date.
+
+Command: cp
+Description: 
+Used to copy a file from a source path to a destination path. A file being 
+copied cannot have the exact same name if the source and the destination 
+directories are the same. Optional switches can be used to trigger 
+features such as prompting before overwriting files, and recursion for 
+copying entire directory structures.
+
+Command: touch
+Description:
+touch is used to change the timestamp for a file. Using touch effectively 
+changes the time that the file is recorded as having been last modified 
+or last accessed. It is up to the user to specify which of these is 
+being changed. Unless the user specifies a date and time, the current 
+date and time are applied.  
+
+Command: uname
+Description:
+This command displays information about the system for the user. On mp 
+this only displays the name of the operating system 'SunOS'.
+
+Command: uname -a
+Description:
+This displays more information than uname about the system, but there are 
+some additional details. This is considered "basic information" by the man 
+pages.
+
+Command: uname -x
+Description:
+This is like uname, as before, except more detailed information about the 
+system is printed to the standard output. This includes information about 
+the kernel, the name of the machine, and the number of CPUs that the 
+machine has.
+
+Command: mkdir
+Description:
+mkdir is used to create directories which have a default permissions mask 
+of '777' or whatever the current file mode creation mask has been set to.
+The argument given is typically the path and name of the directory that is 
+to be created.
+
+Command: cd
+Description:
+cd is used to change the current working directory. The path to the 
+directory to change to is given as the argument. 
+
+Command: w
+Description:
+This command displays a list of currently logged in users and some 
+statistics about how long each user has been logged in, the name of the 
+terminal that the user is on, the user's login name and so on.
+
+Command: wc
+Description: wc by itself will display a count of the number of lines, 
+words, and characters in a file.
+
+Option -c
+wc counts only the number of characters with this option.
+
+Option -w
+wc counts only the number of words separated by either spaces or newline 
+characters.
+
+Option -l
+This option makes wc count only the number of lines in the file.
+
+Command: uptime
+Description: 
+This displays how long the UNIX machine has been running.
+
+Command: whereis
+Description: Given a command, whereis locates the source, binary 
+executable, and man page for that command. Once those have been located, 
+the paths to each are printed on the screen.
+
+Command: who
+Description:
+Displays a list of who is currently logged into the system, much like the 
+"w" command. The information displayed includes the login ID, terminal, 
+date logged in, and the address that they're logging in from.
+
+Command: whoami
+Description:
+Essentially this command displays the login name that you are currently 
+logged in as. It really delivers a sense of identity in a crazy UNIX 
+world. 
+

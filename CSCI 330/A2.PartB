@@ -1,0 +1,44 @@
+Script started on Tue Jan 27 16:17:20 2004
+mp% ln -s /usr/include/stdio.h linkstdio.h
+mp% ls -l linkstdio.h
+lrwxrwxrwx   1 z030199  student       20 Jan 27 16:17 linkstdio.h -> /usr/include/stdio.h
+mp% head linkstdio.h
+/*      Copyright (c) 1988 AT&T */
+/*        All Rights Reserved   */
+
+/*      THIS IS UNPUBLISHED PROPRIETARY SOURCE CODE OF AT&T     */
+/*      The copyright notice above does not evidence any        */
+/*      actual or intended publication of such source code.     */
+
+/*
+ * Copyright (c) 1993-1999, by Sun Microsystems, Inc.
+ * All rights reserved.
+mp% ls -li linkstdio.h
+    153144 lrwxrwxrwx   1 z030199  student       20 Jan 27 16:17 linkstdio.h -> /usr/include/stdio.h
+mp% ls -li /usr/include/stdio.h
+    156313 -rw-r--r--   1 root     bin        11066 Jan  5  2000 /usr/include/stdio.h
+mp% ln /home/mp/z036473/Cprograms/sample.c linksample.c
+mp% head -5 linksample.c
+/*  EXAMPLE "C" PROGRAM ZERO  */
+
+/*  This example program illustrates the 'printf' function.  */
+
+
+mp% gcc linksample.c
+mp% ls -l a.out
+-rwxr-xr-x   1 z030199  student     6352 Jan 27 16:21 a.out
+mp% a.out
+Welcome to the wonderful
+world of 'C' programming!!!
+mp% ls -li linksample.c
+    146034 -rw-r-xr-x  18 z036473  student      198 Jun 19  2001 linksample.c
+mp% ls -li /home/mp/z036473/Cprograms/sample.c
+    146034 -rw-r-xr-x  18 z036473  student      198 Jun 19  2001 /home/mp/z036473/Cprograms/sample.c
+mp% ln linkstdio.h newhardlink
+mp% ls -li newhardlink
+    153144 lrwxrwxrwx   2 z030199  student       20 Jan 27 16:17 newhardlink -> /usr/include/stdio.h
+mp% ls -li /usr/include/stdio.h
+    156313 -rw-r--r--   1 root     bin        11066 Jan  5  2000 /usr/include/stdio.h
+mp% exit
+mp% 
+script done on Tue Jan 27 16:27:31 2004

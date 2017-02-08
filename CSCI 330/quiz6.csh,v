@@ -1,0 +1,11 @@
+head	;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+
+desc
+@Just a file that I like
+@

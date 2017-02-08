@@ -1,0 +1,204 @@
+Script started on Tue Feb 03 13:05:39 2004
+mp% mkdir udir
+mp% ls -l udir
+total 0
+mp% ls -l
+total 20
+drwx------   8 z030199  student      512 Mar 21  2002 241
+drwx------   7 z030199  student      512 Jan 30 12:27 466
+drwx------   4 z030199  student      512 Jan 12 10:41 480
+-rw-------   1 z030199  student        0 Feb  3 13:05 A3.PartA
+drwx------   2 z030199  student      512 Jan 23  2002 Mail
+drwx------   2 z030199  student      512 Jan 23  2002 bin
+drwx------   2 z030199  student      512 Feb  2 12:41 csci330
+-r--r--r--   1 z030199  student      314 Mar  7  2001 local.profile
+drwx------   2 z030199  student      512 Jan 12 12:03 pinemail
+drwxr-xr-x   2 z030199  student      512 Feb  3 13:06 udir
+-rw-------   1 z030199  student       34 Jan 23 12:21 vifile.txt
+mp% chmod go-rx udir
+mp% ls -l
+total 20
+drwx------   8 z030199  student      512 Mar 21  2002 241
+drwx------   7 z030199  student      512 Jan 30 12:27 466
+drwx------   4 z030199  student      512 Jan 12 10:41 480
+-rw-------   1 z030199  student        0 Feb  3 13:05 A3.PartA
+drwx------   2 z030199  student      512 Jan 23  2002 Mail
+drwx------   2 z030199  student      512 Jan 23  2002 bin
+drwx------   2 z030199  student      512 Feb  2 12:41 csci330
+-r--r--r--   1 z030199  student      314 Mar  7  2001 local.profile
+drwx------   2 z030199  student      512 Jan 12 12:03 pinemail
+drwx------   2 z030199  student      512 Feb  3 13:06 udir
+-rw-------   1 z030199  student       34 Jan 23 12:21 vifile.txt
+mp% cd udir
+mp% echo "Line A of file1 file" > file1
+mp% echo "Line A of file2 file" > file2
+mp% ls -l
+total 4
+-rw-r--r--   1 z030199  student       21 Feb  3 13:07 file1
+-rw-r--r--   1 z030199  student       21 Feb  3 13:07 file2
+mp% chmod go-r file*
+mp% ls -l
+total 4
+-rw-------   1 z030199  student       21 Feb  3 13:07 file1
+-rw-------   1 z030199  student       21 Feb  3 13:07 file2
+mp% cd ..
+mp% pwd
+/home/mp/z030199
+mp% ls -l
+total 20
+drwx------   8 z030199  student      512 Mar 21  2002 241
+drwx------   7 z030199  student      512 Jan 30 12:27 466
+drwx------   4 z030199  student      512 Jan 12 10:41 480
+-rw-------   1 z030199  student        0 Feb  3 13:05 A3.PartA
+drwx------   2 z030199  student      512 Jan 23  2002 Mail
+drwx------   2 z030199  student      512 Jan 23  2002 bin
+drwx------   2 z030199  student      512 Feb  2 12:41 csci330
+-r--r--r--   1 z030199  student      314 Mar  7  2001 local.profile
+drwx------   2 z030199  student      512 Jan 12 12:03 pinemail
+drwx------   2 z030199  student      512 Feb  3 13:07 udir
+-rw-------   1 z030199  student       34 Jan 23 12:21 vifile.txt
+mp% chmod o-x udir
+mp% ls -l
+total 20
+drwx------   8 z030199  student      512 Mar 21  2002 241
+drwx------   7 z030199  student      512 Jan 30 12:27 466
+drwx------   4 z030199  student      512 Jan 12 10:41 480
+-rw-------   1 z030199  student        0 Feb  3 13:05 A3.PartA
+drwx------   2 z030199  student      512 Jan 23  2002 Mail
+drwx------   2 z030199  student      512 Jan 23  2002 bin
+drwx------   2 z030199  student      512 Feb  2 12:41 csci330
+-r--r--r--   1 z030199  student      314 Mar  7  2001 local.profile
+drwx------   2 z030199  student      512 Jan 12 12:03 pinemail
+drwx------   2 z030199  student      512 Feb  3 13:07 udir
+-rw-------   1 z030199  student       34 Jan 23 12:21 vifile.txt
+mp% chmod o=rw udir
+mp% ls -l
+total 20
+drwx------   8 z030199  student      512 Mar 21  2002 241
+drwx------   7 z030199  student      512 Jan 30 12:27 466
+drwx------   4 z030199  student      512 Jan 12 10:41 480
+-rw-------   1 z030199  student        0 Feb  3 13:05 A3.PartA
+drwx------   2 z030199  student      512 Jan 23  2002 Mail
+drwx------   2 z030199  student      512 Jan 23  2002 bin
+drwx------   2 z030199  student      512 Feb  2 12:41 csci330
+-r--r--r--   1 z030199  student      314 Mar  7  2001 local.profile
+drwx------   2 z030199  student      512 Jan 12 12:03 pinemail
+drwx---rw-   2 z030199  student      512 Feb  3 13:07 udir
+-rw-------   1 z030199  student       34 Jan 23 12:21 vifile.txt
+mp% chmod u=rw udir
+mp% ls -l
+total 20
+drwx------   8 z030199  student      512 Mar 21  2002 241
+drwx------   7 z030199  student      512 Jan 30 12:27 466
+drwx------   4 z030199  student      512 Jan 12 10:41 480
+-rw-------   1 z030199  student        0 Feb  3 13:05 A3.PartA
+drwx------   2 z030199  student      512 Jan 23  2002 Mail
+drwx------   2 z030199  student      512 Jan 23  2002 bin
+drwx------   2 z030199  student      512 Feb  2 12:41 csci330
+-r--r--r--   1 z030199  student      314 Mar  7  2001 local.profile
+drwx------   2 z030199  student      512 Jan 12 12:03 pinemail
+drw----rw-   2 z030199  student      512 Feb  3 13:07 udir
+-rw-------   1 z030199  student       34 Jan 23 12:21 vifile.txt
+mp% chmod o-rw udir
+mp% ls -l
+total 20
+drwx------   8 z030199  student      512 Mar 21  2002 241
+drwx------   7 z030199  student      512 Jan 30 12:27 466
+drwx------   4 z030199  student      512 Jan 12 10:41 480
+-rw-------   1 z030199  student        0 Feb  3 13:05 A3.PartA
+drwx------   2 z030199  student      512 Jan 23  2002 Mail
+drwx------   2 z030199  student      512 Jan 23  2002 bin
+drwx------   2 z030199  student      512 Feb  2 12:41 csci330
+-r--r--r--   1 z030199  student      314 Mar  7  2001 local.profile
+drwx------   2 z030199  student      512 Jan 12 12:03 pinemail
+drw-------   2 z030199  student      512 Feb  3 13:07 udir
+-rw-------   1 z030199  student       34 Jan 23 12:21 vifile.txt
+mp% cd udir
+udir: Permission denied
+mp% ls -l udir
+udir/file1: Permission denied
+udir/file2: Permission denied
+total 0
+mp% ls udir
+file1  file2
+mp% type udir/file1               cat udir/file1
+cat: cannot open udir/file1
+mp% cp udir/file2 .
+cp: cannot access udir/file2
+mp% mv udir/file1 udir/file1.old
+mv: cannot access udir/file1
+mp% rm udir/file1
+udir/file1: Permission denied
+mp% ln udir/file1 file1lnk
+ln: cannot access udir/file1
+mp% ln udir/file2 file2link
+ln: cannot access udir/file2
+mp% chmod u=rx udir
+mp% ls -l
+total 20
+drwx------   8 z030199  student      512 Mar 21  2002 241
+drwx------   7 z030199  student      512 Jan 30 12:27 466
+drwx------   4 z030199  student      512 Jan 12 10:41 480
+-rw-------   1 z030199  student        0 Feb  3 13:05 A3.PartA
+drwx------   2 z030199  student      512 Jan 23  2002 Mail
+drwx------   2 z030199  student      512 Jan 23  2002 bin
+drwx------   2 z030199  student      512 Feb  2 12:41 csci330
+-r--r--r--   1 z030199  student      314 Mar  7  2001 local.profile
+drwx------   2 z030199  student      512 Jan 12 12:03 pinemail
+dr-x------   2 z030199  student      512 Feb  3 13:07 udir
+-rw-------   1 z030199  student       34 Jan 23 12:21 vifile.txt
+mp% chmodudi    udir
+usage:  chmod [-fR] <absolute-mode> file ...
+        chmod [-fR] <symbolic-mode-list> file ...
+where   <symbolic-mode-list> is a comma-separated list of
+        [ugoa]{+|-|=}[rwxXlstugo]
+mp% cd udir
+mp% cd ..
+mp% ls -l udir
+total 4
+-rw-------   1 z030199  student       21 Feb  3 13:07 file1
+-rw-------   1 z030199  student       21 Feb  3 13:07 file2
+mp% cat udir/file1
+Line A of file1 file
+mp% cp udir/file2 .
+mp% mv udir/file1 udir/file1.old
+mv: cannot rename udir/file1: Permission denied
+mp% rm udir/file2
+rm: udir/file2 not removed: Permission denied
+mp% ln udir/file2 file2link
+mp% cmh  hmod u=wx udir
+mp% cd udir
+mp% ls udir
+udir: No such file or directory
+mp% pwd
+/home/mp/z030199/udir
+mp% cd ..
+mp% ls udir
+udir: Permission denied
+mp% cat udir/fiel  le       1
+Line A of file1 file
+mp% ls -l 
+total 24
+drwx------   8 z030199  student      512 Mar 21  2002 241
+drwx------   7 z030199  student      512 Jan 30 12:27 466
+drwx------   4 z030199  student      512 Jan 12 10:41 480
+-rw-------   1 z030199  student        0 Feb  3 13:05 A3.PartA
+drwx------   2 z030199  student      512 Jan 23  2002 Mail
+drwx------   2 z030199  student      512 Jan 23  2002 bin
+drwx------   2 z030199  student      512 Feb  2 12:41 csci330
+-rw-------   1 z030199  student       21 Feb  3 13:27 file2
+-rw-------   2 z030199  student       21 Feb  3 13:07 file2link
+-r--r--r--   1 z030199  student      314 Mar  7  2001 local.profile
+drwx------   2 z030199  student      512 Jan 12 12:03 pinemail
+d-wx------   2 z030199  student      512 Feb  3 13:07 udir
+-rw-------   1 z030199  student       34 Jan 23 12:21 vifile.txt
+mp% cat udir/file2
+Line A of file2 file
+mp% mv udir/file1 udir/file1.old
+mp% rm udir/file1
+udir/file1: No such file or directory
+mp% rm udir/file2
+mp% ln file1.old         udir/file1.old oldfile1link
+mp% exit
+mp% 
+script done on Tue Feb 03 13:38:44 2004

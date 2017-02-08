@@ -1,0 +1,20 @@
+
+SQL*Plus: Release 8.1.6.0.0 - Production on Wed May 4 22:46:38 2005
+
+(c) Copyright 1999 Oracle Corporation.  All rights reserved.
+
+
+Connected to:
+Oracle8i Enterprise Edition Release 8.1.6.0.0 - Production
+With the Partitioning option
+JServer Release 8.1.6.0.0 - Production
+
+
+DEPT	   Single Faculty
+---------- --------------
+CSCI			0
+MATH			1
+
+Disconnected from Oracle8i Enterprise Edition Release 8.1.6.0.0 - Production
+With the Partitioning option
+JServer Release 8.1.6.0.0 - Production

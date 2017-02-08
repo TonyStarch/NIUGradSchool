@@ -1,0 +1,36 @@
+ftp> 
+bye            	cd             	cdup           	
+close          	delete         	help           	
+lcd            	mkdir          	open           	
+pwd            	rename         	rmdir          	
+disconnect     	?              	
+ftp> lcd	change local working directory
+ftp> Local directory now /home/mp/z030199
+ftp> ?Invalid command
+ftp> Not connected.
+ftp> (to) Connected to 131.156.145.2
+ftp> (remote directory) ftp> "/home/mp/z030199/531/assign5" is current directory.
+ftp> ftp> Local directory now /home/mp/z030199/tmp5
+ftp> ftp> (directory-name) ftp> rmdir command successful.
+ftp> calling rename code
+ftp> calling rename code
+(to-name) ftp> calling rename code
+(from-name) (to-name) ftp> ?Invalid command
+ftp> delete	delete remote file
+ftp> (remote file) ftp> "/home/mp/z030199/531/assign5" is current directory.
+ftp> ftp> ftp> ftp> cdup command successful.
+ftp> "/home/mp/z030199/531" is current directory.
+ftp> ftp> Not connected.
+ftp> ftp> ftp> ?Invalid command
+ftp> ftp> Connected to 131.156.145.2
+ftp> CWD command successful.
+ftp> cdup command successful.
+ftp> "/" is current directory.
+ftp> Goodbye.
+ftp> Not connected.
+ftp> ?Invalid command
+ftp>      UID   PID  PPID  C    STIME TTY      TIME CMD
+ z030199 29184 29179  0 11:05:34 pts/7    0:00 -csh
+ z030199 29237 29215  0 11:06:34 pts/8    0:00 more P5_1
+ z030199 29557 29184  0 11:15:23 pts/7    0:00 /bin/csh P5_1
+ z030199 29215 29211  0 11:06:09 pts/8    0:00 -csh

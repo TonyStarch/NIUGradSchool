@@ -1,0 +1,37 @@
+Script started on Thu Mar 24 07:48:12 2005
+21 > server4.exe &
+[1] 7955
+22 > client1.exe 127.0.0.1
+11 22
+33
+-11 -44
+-55
+^D23 > child 7957 terminated
+
+23 > kill 7955
+24 > ps
+   PID TT       S  TIME COMMAND
+  6617 pts/3    S  0:00 -csh
+  7950 pts/3    S  0:00 script echo.out4
+  7951 pts/3    S  0:00 script echo.out4
+  7952 pts/17   S  0:00 sh -i
+[1]  + Killed               server4.exe
+25 > server5.exe &
+[1] 7965
+26 > client3.exe 127.0.0.1
+1 2
+3
+-22 -77
+-16777314
+^D27 > child 7983 terminated
+
+27 > kill 7965
+28 > ps
+   PID TT       S  TIME COMMAND
+  6617 pts/3    S  0:00 -csh
+  7950 pts/3    S  0:00 script echo.out4
+  7951 pts/3    S  0:00 script echo.out4
+  7952 pts/17   S  0:00 sh -i
+[1]  + Killed               server5.exe
+29 > ^D
+script done on Thu Mar 24 07:50:22 2005

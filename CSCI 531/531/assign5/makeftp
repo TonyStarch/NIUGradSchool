@@ -1,0 +1,5 @@
+compile.531 FTP wrapper in_out prog5util prog5client
+link.531 FTP wrapper in_out prog5util prog5client
+mv FTP FTP.exe
+
+

@@ -1,0 +1,78 @@
+Script started on Tue Feb 03 13:41:53 2004
+mp% groups
+student
+mp% umask
+22
+mp% mkdir current-assign data submit-assign
+mp% ls -l
+total 52
+drwx------   8 z030199  student      512 Mar 21  2002 241
+drwx------   7 z030199  student      512 Jan 30 12:27 466
+drwx------   4 z030199  student      512 Jan 12 10:41 480
+-rw-------   1 z030199  student     8790 Feb  3 13:38 A3.PartA
+-rw-------   1 z030199  student        0 Feb  3 13:41 A3.PartB
+drwx------   2 z030199  student      512 Jan 23  2002 Mail
+drwx------   2 z030199  student      512 Jan 23  2002 bin
+drwx------   2 z030199  student      512 Feb  2 12:41 csci330
+drwxr-xr-x   2 z030199  student      512 Feb  3 13:42 current-assign
+drwxr-xr-x   2 z030199  student      512 Feb  3 13:42 data
+-rw-------   1 z030199  student       21 Feb  3 13:27 file2
+-rw-------   1 z030199  student       21 Feb  3 13:07 file2link
+-r--r--r--   1 z030199  student      314 Mar  7  2001 local.profile
+-rw-------   2 z030199  student       21 Feb  3 13:07 oldfile1link
+drwx------   2 z030199  student      512 Jan 12 12:03 pinemail
+drwxr-xr-x   2 z030199  student      512 Feb  3 13:42 submit-assign
+-rw-------   1 z030199  student      129 Feb  3 13:41 typescript
+d-wx------   2 z030199  student      512 Feb  3 13:38 udir
+-rw-------   1 z030199  student       34 Jan 23 12:21 vifile.txt
+mp% chmod 740 data
+mp% ls -l data
+total 0
+mp% ls data
+mp% ls -l | grep '^d'
+drwx------   8 z030199  student      512 Mar 21  2002 241
+drwx------   7 z030199  student      512 Jan 30 12:27 466
+drwx------   4 z030199  student      512 Jan 12 10:41 480
+drwx------   2 z030199  student      512 Jan 23  2002 Mail
+drwx------   2 z030199  student      512 Jan 23  2002 bin
+drwx------   2 z030199  student      512 Feb  2 12:41 csci330
+drwxr-xr-x   2 z030199  student      512 Feb  3 13:42 current-assign
+drwxr-----   2 z030199  student      512 Feb  3 13:42 data
+drwx------   2 z030199  student      512 Jan 12 12:03 pinemail
+drwxr-xr-x   2 z030199  student      512 Feb  3 13:42 submit-assign
+d-wx------   2 z030199  student      512 Feb  3 13:38 udir
+mp% chmod o+x data
+mp% ls -l | grep '^d'
+drwx------   8 z030199  student      512 Mar 21  2002 241
+drwx------   7 z030199  student      512 Jan 30 12:27 466
+drwx------   4 z030199  student      512 Jan 12 10:41 480
+drwx------   2 z030199  student      512 Jan 23  2002 Mail
+drwx------   2 z030199  student      512 Jan 23  2002 bin
+drwx------   2 z030199  student      512 Feb  2 12:41 csci330
+drwxr-xr-x   2 z030199  student      512 Feb  3 13:42 current-assign
+drwxr----x   2 z030199  student      512 Feb  3 13:42 data
+drwx------   2 z030199  student      512 Jan 12 12:03 pinemail
+drwxr-xr-x   2 z030199  student      512 Feb  3 13:42 submit-assign
+d-wx------   2 z030199  student      512 Feb  3 13:38 udir
+mp% umaks    sk 022
+mp% ls -l | grep '^d'
+drwx------   8 z030199  student      512 Mar 21  2002 241
+drwx------   7 z030199  student      512 Jan 30 12:27 466
+drwx------   4 z030199  student      512 Jan 12 10:41 480
+drwx------   2 z030199  student      512 Jan 23  2002 Mail
+drwx------   2 z030199  student      512 Jan 23  2002 bin
+drwx------   2 z030199  student      512 Feb  2 12:41 csci330
+drwxr-xr-x   2 z030199  student      512 Feb  3 13:42 current-assign
+drwxr----x   2 z030199  student      512 Feb  3 13:42 data
+drwx------   2 z030199  student      512 Jan 12 12:03 pinemail
+drwxr-xr-x   2 z030199  student      512 Feb  3 13:42 submit-assign
+d-wx------   2 z030199  student      512 Feb  3 13:38 udir
+mp% mkdir backups
+mp% cp local.profile             /etc/skel/local.profile .profile
+mp% cp .cshrc backups/save.cshrc
+mp% ls -l backups
+total 2
+-r--r--r--   1 z030199  student      746 Feb  3 13:46 save.cshrc
+mp% exit
+mp% 
+script done on Tue Feb 03 13:46:56 2004

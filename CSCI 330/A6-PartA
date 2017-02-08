@@ -1,0 +1,174 @@
+Script started on Tue Mar 02 12:52:51 2004
+21 /home/mp/z030199/csci330%/home/ux/krush/unix/assignments/graderun-a6pa
+Graderun for CSCI 330 Assignment 6, PART A (grade menu program).
+Enter your unix grade program name: a6A.csh
+Enter your section number: 2
+*** Program Source Code ...***
+#!/bin/csh
+
+################################################################
+# Brandon Tweed
+# Z030199
+# CSCI 330
+# Section 2
+# Assignment 6 - Part A
+#
+# Description:
+# This shell program brings up a menu for the user, which
+# displays one of four options that the user can choose
+# from. These options allow the user to check her assignment
+# grades, quiz grades, or exam grade.
+#
+################################################################
+
+# see if the correct number of arguments was given
+if ($#argv == 0 || $#argv > 1) then
+    echo "This progrm requires one argument, your section number."
+    exit 1
+endif
+
+#intially set an invalid choice so that loop is executed
+set choice = 0
+clear
+# while we have not made a choice of 4
+while ($choice != "4")
+    #display the menu
+    echo "    Grade Checking Menu"
+    echo "---------------------------"
+    echo
+    echo "[1] Check Assignment Grades"
+    echo "[2] Check Quiz Grades"
+    echo "[3] Check Exam Grades"
+    echo "[4] Exit the Menu"
+    echo 
+    echo "---------------------------"
+    echo
+    # prompt the user for his/her choice
+    echo -n "Please enter the number of your choice:"
+    set choice = $<
+    # run matching program according to choice
+    switch($choice)
+         case "1":
+                /home/ux/krush/unix/grades/330assign-graderun $1
+                breaksw
+         case "2":
+                /home/ux/krush/unix/grades/330quiz-graderun $1
+                breaksw
+         case "3":
+                /home/ux/krush/unix/grades/330exam-graderun $1
+                breaksw
+         case "4":
+                echo "You have chosen to exit. Thank you\!"
+                exit 0
+                breaksw
+         default:
+                echo "That was an invalid choice. Please try again."
+                sleep 3
+                breaksw
+    endsw
+end
+
+************************************************
+
+Running z030199's program a6A.csh ...
+************************************************
+
+*** Tesing Invalid Input: Zero command line argument ***
+This progrm requires one argument, your section number.
+
+*** Tesing Invalid Input: Three command line arguments ***
+This progrm requires one argument, your section number.
+
+*** Tesing Valid input data ***
+[H[2J    Grade Checking Menu
+---------------------------
+
+[1] Check Assignment Grades
+[2] Check Quiz Grades
+[3] Check Exam Grades
+[4] Exit the Menu
+
+---------------------------
+
+Please enter the number of your choice:TWEED, BRANDON DA        
+Here are your assignment grades:
+
+Assignment 1 :60 out of 60 points
+Assignment 2 :58 out of 60 points
+Assignment 3 :56 out of 60 points
+Assignment 4 :45 out of 45 points
+Assignment 5 :59 out of 60 points
+Assignment 6 :A6 out of A6 points
+Assignment 7 :A7 out of A7 points
+Assignment 8 :A8 out of A8 points
+Assignment 9 :A9 out of A9 points
+Assignment 10 :A10 out of A10 points
+
+Note: a grade of an A followed by one or more digits means
+the grade has not been recorded or received.
+If you have any questions, contact your T.A. first.
+    Grade Checking Menu
+---------------------------
+
+[1] Check Assignment Grades
+[2] Check Quiz Grades
+[3] Check Exam Grades
+[4] Exit the Menu
+
+---------------------------
+
+Please enter the number of your choice:TWEED, BRANDON DA        
+Here are your csci330 quiz grades:
+
+Quiz 1 :10 out of 10 points
+Quiz 2 :10 out of 10 points
+Quiz 3 :8 out of 10 points
+Quiz 4 :20 out of 20 points
+Quiz 5 :10 out of 10 points
+Quiz 6 :8.5 out of 10 points
+Quiz 7 :Q7 out of Q7 points
+Quiz 8 :Q8 out of Q8 points
+Quiz 9 :Q9 out of Q9 points
+Quiz 10 :Q10 out of Q10 points
+Quiz 11 :EC out of 10 points
+
+Note: a grade of an Q followed by one or more digits means
+the grade has not been recorded or received.
+If you have any questions, contact your T.A. first.
+    Grade Checking Menu
+---------------------------
+
+[1] Check Assignment Grades
+[2] Check Quiz Grades
+[3] Check Exam Grades
+[4] Exit the Menu
+
+---------------------------
+
+Please enter the number of your choice:TWEED, BRANDON DA        
+
+Your csci330 midterm exam grade is not available at this time.
+The midterm exam date is March 4, 2004
+2:00 p.m. to 3:15 p.m. at CO101.
+*** If you have any questions, contact Kai Rush ***
+*** in person at PM467 ***
+
+    Grade Checking Menu
+---------------------------
+
+[1] Check Assignment Grades
+[2] Check Quiz Grades
+[3] Check Exam Grades
+[4] Exit the Menu
+
+---------------------------
+
+Please enter the number of your choice:You have chosen to exit. Thank you!
+
+
+ *** Complete running the graderun program. *** 
+
+
+22 /home/mp/z030199/csci330%exit
+23 /home/mp/z030199/csci330%
+script done on Tue Mar 02 12:53:19 2004

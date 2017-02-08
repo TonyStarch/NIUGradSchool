@@ -1,0 +1,116 @@
+Script started on Wed Feb 18 22:20:43 2004
+21 /home/mp/z030199%niscat group.org_dir | grep "root"
+root::0:root,rickert,support,berezin,operator,szkola
+sys::3:root,bin,sys,adm,operator,support,szkola
+22 /home/mp/z030199%niscat group.org_dir | grep "krush" | wc -l
+       4
+23 /home/mp/z030199%last support | head -5
+support   pts/18       68.78.128.85     Wed Feb 18 19:50   still logged in
+support   pts/27       adsl-68-78-137-1 Wed Feb 18 05:46 - 07:25  (01:39)
+support   pts/6        adsl-68-78-33-77 Tue Feb 17 23:41 - 23:43  (00:02)
+support   pts/3        adsl-68-78-33-77 Tue Feb 17 23:23 - 23:46  (00:22)
+support   pts/29       adsl-68-78-137-2 Tue Feb 17 22:43 - 23:21  (00:38)
+24 /home/mp/z030199%ps -ef | egrep "in.telnetd|/usr/lib/sendmail"
+    root 19687   197  0 18:28:34 ?        0:03 in.telnetd
+    root  4954   197  0 21:32:24 ?        0:01 in.telnetd
+    root  6537     1  0   Jan 26 ?        0:00 /usr/lib/sendmail -qp1m
+    root 27024   197  0 19:27:25 ?        0:00 in.telnetd
+ z030199  7431  7328  0 22:22:11 pts/33   0:00 egrep in.telnetd|/usr/lib/sendmail
+    root 17634   197  0 17:56:32 ?        0:02 in.telnetd
+    root 29559   197  0 19:50:40 ?        0:03 in.telnetd
+    root  2819     1  0   Jan 28 ?       22:19 /usr/lib/sendmail -bd -q5m
+    root 13920   197  0 00:16:50 ?        0:00 in.telnetd
+    root  3414   197  0 21:05:59 ?        0:00 in.telnetd
+    root  4239   197  0 21:21:27 ?        0:00 in.telnetd
+    root  6538  6537  0   Jan 26 ?       45:50 /usr/lib/sendmail -qp1m
+    root 19971   197  0 18:32:20 ?        0:00 in.telnetd
+    root  4693   197  0 21:28:23 ?        0:00 in.telnetd
+    root  4281   197  0 21:22:28 ?        0:00 in.telnetd
+    root  2148   197  0 20:37:10 ?        0:00 in.telnetd
+    root  7344   197  0 22:20:48 ?        0:00 in.telnetd
+    root 29591   197  0 19:51:04 ?        0:00 in.telnetd
+25 /home/mp/z030199%grep "... User unknown" /var/log/syslog | head -7
+Feb 18 04:25:12 mp sendmail[19589]: i1IAPAAn019589: <rskrobut@niu.edu>... User unknown
+Feb 18 04:25:12 mp sendmail[19589]: i1IAPAAn019589: <rsoto@niu.edu>... User unknown
+Feb 18 04:28:06 mp sendmail[19611]: i1IAS5ig019611: <ssankey@niu.edu>... User unknown
+Feb 18 04:28:07 mp sendmail[19611]: i1IAS5ig019611: <lrudie@niu.edu>... User unknown
+Feb 18 04:56:49 mp sendmail[19946]: i1IAunmK019946: <NEPAL@MP.CS.NIU.EDU>... User unknown
+Feb 18 04:56:49 mp sendmail[19948]: i1IAun4I019948: <nepal-request@cs.niu.edu>... User unknown
+Feb 18 04:56:49 mp sendmail[19947]: i1IAunqJ019947: <NEPAL@cs.niu.edu>... User unknown
+26 /home/mp/z030199%cd /usr/bin
+27 /usr/bin>ls | wc -l
+     577
+28 /usr/bin>find /usr/bin -name "g*"
+/usr/bin/genlayouttbl
+/usr/bin/sparcv7/gcore
+/usr/bin/geniconvtbl
+/usr/bin/getconf
+/usr/bin/getdev
+/usr/bin/getdgrp
+/usr/bin/getfacl
+/usr/bin/getopt
+/usr/bin/gettext
+/usr/bin/getvol
+/usr/bin/grep
+/usr/bin/groups
+/usr/bin/getopts
+/usr/bin/graph
+/usr/bin/sparcv9/gcore
+/usr/bin/gcore
+/usr/bin/gencat
+/usr/bin/genmsg
+/usr/bin/gettxt
+/usr/bin/getent
+/usr/bin/gpatch
+/usr/bin/gzcmp
+/usr/bin/gzdiff
+/usr/bin/gzexe
+/usr/bin/gzforce
+/usr/bin/gzgrep
+/usr/bin/gzip
+/usr/bin/gzmore
+/usr/bin/gznew
+/usr/bin/gunzip
+/usr/bin/gzcat
+29 /usr/bin>ls -l | grep "[0-9]  1999"
+-rwxr-xr-x   1 bin      bin        19832 Dec 16  1999 apm
+-rwxr-xr-x   1 root     staff     213052 Dec  3  1999 audioconvert
+-rwxr-xr-x   1 root     staff     108084 Dec  3  1999 audioplay
+-rwxr-xr-x   1 root     staff      26344 Dec  3  1999 audiorecord
+-r-xr-xr-x   1 root     bin       126076 Dec  3  1999 genlayouttbl
+-rwxr-xr-x   1 bin      bin          172 Oct 13  1999 lp_1251
+-rwxrwxr-x   1 root     bin         1371 Dec 15  1999 rstartd
+-rwxr-xr-x   1 root     sys        30116 Dec 16  1999 showrev
+-r-xr-xr-x   1 bin      bin        99240 Dec 16  1999 solstice
+-r-xr-xr-x   2 bin      bin       157968 Dec 16  1999 unzip
+-r-xr-xr-x   2 bin      bin       157968 Dec 16  1999 zipinfo
+30 /usr/bin>ls -l | grep "[1-9][0-9]\{7,\}"
+31 /usr/bin>grep "^getcanonname" *.c *.h
+No match
+32 /usr/bin>cd /misc/extra/sendmail/sendmail-8.12.9/sendmail
+33 /misc/extra/sendmail/sendmail-8.12.9/sendmail>grep "^getcanonname" *.c *.h
+map.c:getcanonname(host, hbsize, trymx, pttl)
+34 /misc/extra/sendmail/sendmail-8.12.9/sendmail>grep "^#.* if.* SASL " *.c *.h | cut -d':' -f1 | uniq
+conf.c
+deliver.c
+readcf.c
+sasl.c
+sfsasl.c
+srvrsmtp.c
+usersmtp.c
+sendmail.h
+35 /misc/extra/sendmail/sendmail-8.12.9/sendmail>grep "parseaddr" *.c *.h | cut  -d':' -f1 | uniq
+alias.c
+envelope.c
+main.c
+parseaddr.c
+queue.c
+recipient.c
+savemail.c
+srvrsmtp.c
+sendmail.h
+36 /misc/extra/sendmail/sendmail-8.12.9/sendmail>grep " gethostbyaddr" *.c *.h | cut -d':' -f1 | uniq
+conf.c
+37 /misc/extra/sendmail/sendmail-8.12.9/sendmail>exit
+38 /misc/extra/sendmail/sendmail-8.12.9/sendmail>
+script done on Wed Feb 18 22:35:46 2004

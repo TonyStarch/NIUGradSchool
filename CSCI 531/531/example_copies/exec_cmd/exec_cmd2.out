@@ -1,0 +1,21 @@
+Script started on Mon Jan 31 14:20:34 2005
+21 > exec_cmd2
+% date
+Mon Jan 31 14:20:50 CST 2005
+% finger
+Login       Name               TTY         Idle    When    Where
+support  System Support Accou *pts/1       1:36 Fri 14:37  euclid              
+rickert  Neil Rickert         *pts/2       3:28 Fri 14:37  euclid              
+t90kxs1  K.SRINIVASAMURTHY    *pts/3       5:45 Mon 08:29  204.154.135.103     
+kreed    Kevin Reed            pts/4            Mon 13:40  spxyric1.bankofameri
+z091647  cosgrove brian danie  pts/5       4:10 Sun 14:53  131.156.154.99      
+onyuksel Ibrahim Onyuksel     *pts/14           Mon 14:10  n145h84.cs.niu.edu  
+z063653  choi bonna           *pts/15           Mon 14:12  fll01-30.acs.niu.edu
+z019988  raimondi mark robert *pts/13           Mon 12:30  c-24-14-115-167.clie
+mcmahon  Kurt McMahon         *pts/16        29 Mon 13:49  131.156.145.142     
+% ^Cinterrupt
+% 22 > exec_cmd2
+% pwd
+/home/mp/usr2/onyuksel/courses/531/examples/exec_cmd
+% ^D23 > ^D
+script done on Mon Jan 31 14:21:17 2005

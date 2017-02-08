@@ -1,0 +1,13 @@
+Script started on Mon Jan 31 10:20:57 2005
+21 > ls -l file.hole
+-rw-r--r--   1 onyuksel       50 Jan 28 10:37 file.hole
+22 > cat file.hole
+abcdefghijABCDEFGHIJ23 > 
+23 > od -c file.hole
+0000000   a   b   c   d   e   f   g   h   i   j  \0  \0  \0  \0  \0  \0
+0000020  \0  \0  \0  \0  \0  \0  \0  \0  \0  \0  \0  \0  \0  \0  \0  \0
+0000040  \0  \0  \0  \0  \0  \0  \0  \0   A   B   C   D   E   F   G   H
+0000060   I   J
+0000062
+24 > ^D
+script done on Mon Jan 31 10:21:25 2005

@@ -1,0 +1,14 @@
+Script started on Mon Apr 18 10:08:59 2005
+21 > server1.exe &
+[1] 23300
+22 > client3.exe 127.0.0.1
+hello, world
+hello, world
+^D23 > kill 23300
+24 > !cli
+client3.exe 127.0.0.1
+hello
+read error: Connection refused
+[1]  + Killed               server1.exe
+25 > ^D
+script done on Mon Apr 18 10:10:16 2005

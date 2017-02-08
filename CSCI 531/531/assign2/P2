@@ -1,0 +1,42 @@
+#!/bin/csh
+
+# Enter executable file from keyboard
+# or supply it on Unix command line.
+
+if ($#argv == 0) then
+    echo -n "Enter your executable file: "
+    set efile = $<
+else
+    set efile = $1
+endif
+
+# If file does not exist, abort program.
+if (! -e $efile) then
+    echo "*** ${efile}: no such file ***"
+    exit 1
+endif
+
+echo $efile
+$efile
+echo
+
+echo $efile 127.0.0.1
+$efile 127.0.0.1
+echo
+
+echo $efile 131.156.145.41
+$efile 131.156.145.41
+echo
+
+echo $efile 131.156.145.2
+$efile 131.156.145.2
+echo
+
+echo $efile 131.156.145.1
+$efile 131.156.145.1
+echo
+
+echo $efile 131.156.145
+$efile 131.156.145
+echo
+

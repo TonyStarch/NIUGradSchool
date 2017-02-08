@@ -1,0 +1,49 @@
+Script started on Thu Jan 20 16:59:58 2005
+21 > dir_list .
+.
+..
+dir_list.out
+dir_list.o
+dir_list.c
+dir_list
+22 > dir_list /
+.
+..
+lost+found
+var
+export
+usr
+etc
+opt
+kernel
+platform
+bin
+dev
+devices
+lib
+mnt
+proc
+sbin
+tmp
+home
+misc
+.ssh
+.ssh2
+.shosts
+croot
+usr2
+nsr
+net
+xfn
+vol
+sadm
+.lsof_mp
+cdrom
+texicons.png
+.mozilla
+23 > dir_list /lost+found
+can't open /lost+found: Permission denied
+24 > dir_list /dev/tty
+can't open /dev/tty: Not a directory
+25 > ^D
+script done on Thu Jan 20 17:00:35 2005

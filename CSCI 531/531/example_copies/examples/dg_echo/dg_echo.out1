@@ -1,0 +1,13 @@
+Script started on Fri Apr 15 09:48:54 2005
+21 > server1.exe &
+[1] 25706
+22 > client1.exe 127.0.0.1
+hello, world
+hello, world
+^D23 > kill 25706
+24 > !cli
+client1.exe 127.0.0.1
+hello
+^C[1]  + Killed               server1.exe
+25 > ^D
+script done on Fri Apr 15 09:50:24 2005

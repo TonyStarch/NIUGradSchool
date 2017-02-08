@@ -1,0 +1,6 @@
+Script started on Fri Feb 25 10:22:53 2005
+21 > byteorder.exe
+sizeof(short) = 2
+big-endian
+22 > ^D
+script done on Fri Feb 25 10:23:07 2005

@@ -1,0 +1,124 @@
+#!/bin/sh
+
+########################################################
+# cleaner
+# Author: Brandon Tweed
+# Date Written: 4-27-2004
+# Date Last Modified: 4-27-2004
+# 
+# Purpose: this cleaner script searches for 
+# matching files to delete by a specified criteria
+# chosen by the user from a menu
+#
+########################################################
+
+#the location for the temporary candidates file
+candidates_file="/tmp/candidates.out"
+
+if [ "$1" = "-s" ]
+then
+   search_only="true"
+else
+   search_only="false"
+fi
+
+# for debugging purposes
+# echo "search_only is set to: $search_only"
+
+##################################################
+#
+# menu 
+#
+# displays a menu from the user and repeatedly
+# gets input until the user makes a valid choice
+#
+##################################################
+
+menu(){
+  choice=" "
+  # while invalid choice
+  while :
+  do
+    echo 
+    echo "Cleaner Menu"
+    echo "------------"
+    echo "[1] search by file name"
+    echo "[2] search by string found in file"
+    echo "[3] exit this program"
+    echo 
+    echo "Please choose a number: \c"
+    read choice
+    case $choice in
+        "1")
+            return 1
+            break
+            ;;
+        "2")
+            return 2
+            break
+            ;;
+        "3")
+            return 3
+            break
+            ;;
+        *)
+            echo "That was an invalid choice. Try again."
+            ;;
+    esac
+  done
+}
+
+# run as an infinitely looped process
+# way to exit is to break out by entering "3"
+while :
+do
+  menu
+  userchoice=$?
+  case $userchoice in
+      "1")
+          echo "Enter file name to search for:"
+          read fname
+          #Use find to search for all files of that name
+          if [ "$search_only" = "true" ]
+          then
+            echo "Results matching search:"
+            find . -type f -perm -400 -name $fname -print
+          else
+            find . -type f -name $fname -print -exec rm -i {} \; 
+          fi
+          ;;
+      "2")
+          #for each located file, use grep to check for string match
+          echo "Enter string to search for:"
+          read search_string
+          #use find to search for only regular readable files
+          find . -type f -perm -400 -print > $candidates_file
+          #for all files in list of candidates
+          for i in `cat $candidates_file`
+          do
+            #check if file is a valid script
+            file $i | egrep -s '(script|text)'
+            if [ "$?" -eq "0" ]
+            then
+               # if file contains the matching string
+               egrep -s "$search_string" $i
+               if [ "$?" -eq "0" ]
+               then
+                  #indicate matching file was found
+                  echo "$i contained $search_string"
+                  #if not search only, delete file with confirmation
+                  if [ "$search_only" = "false" ]
+                  then
+                     rm -i $i
+                  fi
+               fi
+            fi
+          done
+          ;;
+      "3")
+          # user entered a 3, so quit
+          echo "Quitting. Good bye!"
+          break
+          ;;
+  esac
+done

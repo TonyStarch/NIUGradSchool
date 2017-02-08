@@ -1,0 +1,42 @@
+Script started on Tue Jan 27 16:27:56 2004
+mp% cd /
+mp% ls -l | grep '^d" '
+drwxr-xr-x   2 root     nobody       512 Feb  4  2003 cdrom
+drwxr-xr-x   8 root     staff        512 Nov 27 22:24 croot
+drwxr-xr-x  13 root     sys         4096 Jan 14 12:08 dev
+drwxr-xr-x   4 root     sys          512 Jun 12  2002 devices
+drwxr-xr-x  46 root     sys         4608 Jan  7 14:06 etc
+drwxr-xr-x   3 root     sys          512 May 22  2002 export
+dr-xr-xr-x   4 root     root           4 Jan 27 16:01 home
+drwxr-xr-x   9 root     sys          512 Jan  6 16:33 kernel
+drwx------   2 root     root        8192 Jun 12  2002 lost+found
+dr-xr-xr-x   1 root     root           1 Jan 26 08:15 misc
+drwxr-xr-x   2 root     sys          512 Jun 12  2002 mnt
+dr-xr-xr-x   1 root     root           1 Jan 17 11:45 net
+drwxr-xr-x  19 root     sys         1024 Jan 14 19:09 opt
+drwxr-xr-x  29 root     sys         1024 Aug 11 11:12 platform
+dr-xr-xr-x 116 root     root       62144 Jan 27 16:30 proc
+drwxr-xr-x   9 root     sys          512 Jan  6 19:11 sadm
+drwxr-xr-x   2 root     sys         1024 Jan  7 11:39 sbin
+drwxrwxrwt   2 root     sys         1046 Jan 27 16:30 tmp
+drwxr-xr-x  35 root     sys         1024 Dec 17 12:57 usr
+drwxr-xr-x  34 root     sys         1024 Jan  6 22:21 var
+dr-xr-xr-x   6 root     root         512 Jan  6 19:19 vol
+dr-xr-xr-x   1 root     root           1 Jan  6 19:19 xfn
+mp% ls -l | grep '^d' | wc -l
+      22
+mp% ls -l | grep '^l' | wc -l
+       4
+mp% ls -ld tmp
+drwxrwxrwt   3 root     sys         1115 Jan 27 16:33 tmp
+mp% ttyp 
+/dev/pts/13
+mp% ls -l /v^?   dev/pts/13
+lrwxrwxrwx   1 root     root          29 Jun 12  2002 /dev/pts/13 -> ../../devices/pseudo/pts@0:13
+mp% echo $MAIL
+/var/mail/z030199
+mp% ls -l /var/mail/z030199
+-rw-rw----   1 z030199  mail           0 Jan 15 15:47 /var/mail/z030199
+mp% exit
+mp% 
+script done on Tue Jan 27 16:39:08 2004

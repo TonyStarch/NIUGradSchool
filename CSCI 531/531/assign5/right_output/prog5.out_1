@@ -1,0 +1,54 @@
+Script started on Wed Apr 13 05:58:04 2005
+21 > P5_1
+ftp> Commands may be abbreviated.  Commands are:
+
+?               append          bye             cd              cdup            
+close           delete          dir             disconnect      get             
+help            lcd             ls              mkdir           open            
+put             pwd             quit            recv            rename          
+rmdir           send            
+ftp> lcd        change local working directory
+ftp> Local directory now /home/mp/usr2/onyuksel
+ftp> ?Invalid command
+ftp> Not connected.
+ftp> (to) Connected to 131.156.145.2.
+ftp> (remote-directory) CWD command successful.
+ftp> "/home/mp/usr2/onyuksel" is current directory.
+ftp> CWD command successful.
+ftp> Local directory now /home/mp/usr2/onyuksel/tmp5
+ftp> MKD command successful.
+tmpX: No such file or directory.
+ftp> (directory-name) ftp> RMD command successful.
+ftp> File exists, ready for destination name
+RNTO command successful.
+ftp> (to-name) File exists, ready for destination name
+RNTO command successful.
+ftp> (from-name) (to-name) File exists, ready for destination name
+RNTO command successful.
+ftp> ?Invalid command
+ftp> delete     delete remote file
+p5.h: No such file or directory.
+ftp> (remote-file) ftp> "/home/mp/usr2/onyuksel/tmp5" is current directory.
+ftp> CWD command successful.
+p5.h: No such file or directory.
+ftp> ftp> DELE command successful.
+ftp> CWD command successful.
+ftp> "/home/mp/usr2/onyuksel/tmp5" is current directory.
+ftp> Goodbye.
+ftp> Not connected.
+connect error: Connection refused
+inet_pton error: Invalid address
+ftp> ftp> ftp> ftp> Connected to 131.156.145.2.
+ftp> CWD command successful.
+ftp> CWD command successful.
+ftp> "/" is current directory.
+ftp> Goodbye.
+ftp> Not connected.
+ftp>      UID   PID  PPID  C    STIME TTY      TIME CMD
+onyuksel 13089 12814  0 05:58:04 pts/3    0:00 script prog5.out_1
+onyuksel 13091 13090  0 05:58:04 pts/5    0:00 sh -i
+onyuksel 13093 13091  0 05:58:09 pts/5    0:00 /bin/csh P5_1
+onyuksel 12814 12812  0 05:34:15 pts/3    0:00 -csh
+onyuksel 13090 13089  0 05:58:04 pts/3    0:00 script prog5.out_1
+22 > ^D
+script done on Wed Apr 13 05:58:23 2005
