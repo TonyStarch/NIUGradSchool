@@ -1,8 +1,6 @@
 
-//#include "unp.h"
-
-/* instead, */
-#include"/usr2/onyuksel/courses/531/common/531.h"
+#include<stdio.h>
+#include<stdlib.h>
 
 int main (int argc, char ** argv)
 {
@@ -16,7 +14,7 @@ int main (int argc, char ** argv)
 	if ( sizeof(short) == 2) {
 		if(un.c[0] == 1 && un.c[1] == 2)
 			printf("big-endian\n");
-		else if (un.c[0] == 2 && un.c[1] == 10)
+		else if (un.c[0] == 2 && un.c[1] == 1)
 			printf("little-endian\n");
 		else
 			printf("unknown\n");
